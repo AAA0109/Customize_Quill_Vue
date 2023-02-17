@@ -1752,14 +1752,14 @@ let emojiList = [
     "category": "s",
     "emoji_order": "1299"
   },
-  {
-    "name": "heart_exclamation",
-    "unicode": "2763",
-    "shortname": ":heart_exclamation:",
-    "code_decimal": "&#10083;",
-    "category": "s",
-    "emoji_order": "1300"
-  },
+  // {
+  //   "name": "heart_exclamation",
+  //   "unicode": "2763",
+  //   "shortname": ":heart_exclamation:",
+  //   "code_decimal": "&#10083;",
+  //   "category": "s",
+  //   "emoji_order": "1300"
+  // },
   {
     "name": "love_letter",
     "unicode": "1f48c",
@@ -4480,14 +4480,14 @@ let emojiList = [
     "category": "t",
     "emoji_order": "1640"
   },
-  {
-    "name": "octagonal_sign",
-    "unicode": "1f6d1",
-    "shortname": ":octagonal_sign:",
-    "code_decimal": "&#128721;",
-    "category": "s",
-    "emoji_order": "1641"
-  },
+  // {
+  //   "name": "octagonal_sign",
+  //   "unicode": "1f6d1",
+  //   "shortname": ":octagonal_sign:",
+  //   "code_decimal": "&#128721;",
+  //   "category": "s",
+  //   "emoji_order": "1641"
+  // },
   {
     "name": "anchor",
     "unicode": "2693",
@@ -10783,14 +10783,14 @@ let emojiList = [
     "category": "f",
     "emoji_order": "2444"
   },
-  {
-    "name": "speech",
-    "unicode": "1f600",
-    "shortname": ":speech:",
-    "code_decimal": "&#128172;",
-    "category": "p",
-    "emoji_order": "1"
-  }
+  // {
+  //   "name": "speech",
+  //   "unicode": "1f600",
+  //   "shortname": ":speech:",
+  //   "code_decimal": "&#128172;",
+  //   "category": "p",
+  //   "emoji_order": "1"
+  // }
 ];
 
 export default emojiList;

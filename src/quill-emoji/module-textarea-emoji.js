@@ -116,6 +116,22 @@ function fn_emojiPanelInit(panel,quill){
     document.querySelector('.filter-people').classList.add('active');
 }
 
+function addRecent(emoji) {
+    console.log(emoji.name);
+    const storedRecentEmoji = localStorage.getItem("recentEmoji");
+    let saved = [];
+    if(storedRecentEmoji) saved = JSON.parse(storedRecentEmoji);
+    saved = saved.filter((itm, idx) => saved.indexOf(itm) === idx);
+
+    while(saved.indexOf(emoji.name) > -1) {
+        saved.splice(saved.indexOf(emoji.name), 1);
+    }
+    saved.unshift(emoji.name);
+
+    if (saved.length > 100) saved.splice(101, 100)
+    localStorage.setItem("recentEmoji", JSON.stringify(saved));
+}
+
 function fn_emojiElementsToPanel(type,panel,quill){
     let fuseOptions = {
                     shouldSort: true,
@@ -135,7 +151,8 @@ function fn_emojiElementsToPanel(type,panel,quill){
       return a.emoji_order - b.emoji_order;
     });
     if (type === 'r') {
-        const recentItems = JSON.parse(localStorage.getItem('recentEmoji')) || [];
+        let recentItems = JSON.parse(localStorage.getItem('recentEmoji')) || [];
+        recentItems = recentItems.filter((itm, idx) => recentItems.indexOf(itm) === idx)
         result = [];
         for (let i = 0; i < recentItems.length; i ++) {
             const itm = emojiList.find(t => t.name === recentItems[i]);
@@ -165,7 +182,10 @@ function fn_emojiElementsToPanel(type,panel,quill){
                 // quill.setSelection(range.index + customButton.innerHTML.length, 0);
                 // range.index = range.index + customButton.innerHTML.length;
                 quill.insertEmbed(range.index, 'emoji', emoji, Quill.sources.USER);
-                setTimeout(() => quill.setSelection(range.index + 1), 0);
+                quill.enable();
+                // quill.getModule('toolbar').enable();
+                addRecent(emoji);
+                setTimeout(() => quill.setSelection(range.index + 1), 100);
                 fn_close();
             });
         }
