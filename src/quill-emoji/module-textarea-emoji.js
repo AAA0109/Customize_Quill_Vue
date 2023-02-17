@@ -31,6 +31,7 @@ class TextAreaEmoji extends Module {
             ele_emoji_area.appendChild(tabToolbar);
 
             var emojiType = [
+                {'type':'r','name':'recent','content':'<div class="i-clock"></div>'},
                 {'type':'p','name':'people','content':'<div class="i-people"></div>'},
                 {'type':'n','name':'nature','content':'<div class="i-nature"></div>'},
                 {'type':'d','name':'food','content':'<div class="i-food"></div>'},
@@ -38,8 +39,7 @@ class TextAreaEmoji extends Module {
                 {'type':'a','name':'activity','content':'<div class="i-activity"></div>'},
                 {'type':'t','name':'travel','content':'<div class="i-travel"></div>'},
                 {'type':'o','name':'objects','content':'<div class="i-objects"></div>'},
-                {'type':'f','name':'flags','content':'<div class="i-flags"></div>'},
-                {'type':'r','name':'recent','content':'<div class="i-clock"></div>'}
+                {'type':'f','name':'flags','content':'<div class="i-flags"></div>'}
             ];
 
             let tabElementHolder = document.createElement('ul');
