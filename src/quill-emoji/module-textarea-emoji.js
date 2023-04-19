@@ -112,8 +112,8 @@ function fn_updateRange(quill){
 }
 
 function fn_emojiPanelInit(panel,quill){
-    fn_emojiElementsToPanel('p', panel, quill);
-    document.querySelector('.filter-people').classList.add('active');
+    fn_emojiElementsToPanel('r', panel, quill);
+    document.querySelector('.filter-recent').classList.add('active');
 }
 
 function addRecent(emoji) {

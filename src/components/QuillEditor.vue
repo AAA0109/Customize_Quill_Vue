@@ -9,8 +9,6 @@
 <script>
 import { quillEditor, Quill } from "vue-quill-editor";
 import "quill/dist/quill.snow.css";
-// import "quill/dist/quill.core.css";
-// import "quill/dist/quill.bubble.css";
 import "quill-emoji/dist/quill-emoji.css";
 import "../quill-emoji/custom.css";
 import QuillEmoji from "quill-emoji";
